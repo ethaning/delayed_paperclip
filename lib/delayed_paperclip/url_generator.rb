@@ -8,7 +8,7 @@ module DelayedPaperclip
 
       timestamp_as_needed(
         escape_url_as_needed(
-          @attachment_options[:interpolator].interpolate(most_appropriate_url, @attachment, style_name),
+          @attachment.options[:interpolator].interpolate(most_appropriate_url, @attachment, style_name),
           options
         ),
       options)
@@ -28,7 +28,7 @@ module DelayedPaperclip
           end
 
         else
-          @attachment_options[:url]
+          @attachment.options[:url]
         end
       else
         super()
